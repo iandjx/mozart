@@ -3,6 +3,7 @@ import Header from '../components/shared/Header'
 import Layout from '../components/shared/Layout'
 import Option from './../components/createNFT/Option'
 import { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
 
 const options = [
   {

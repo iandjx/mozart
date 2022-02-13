@@ -3,8 +3,11 @@ lockfileVersion: 5.3
 specifiers:
   '@commitlint/cli': ^16.1.0
   '@commitlint/config-conventional': ^16.0.0
+  '@tailwindcss/forms': ^0.4.0
+  '@tailwindcss/line-clamp': ^0.3.1
   '@types/node': 17.0.16
   '@types/react': 17.0.39
+  '@types/wavesurfer.js': ^6.0.0
   '@typescript-eslint/eslint-plugin': ^5.11.0
   autoprefixer: ^10.4.2
   eslint: 8.8.0
@@ -17,19 +20,28 @@ specifiers:
   prettier: ^2.5.1
   react: 17.0.2
   react-dom: 17.0.2
+  react-dropzone: ^12.0.2
+  react-hook-form: ^7.27.0
   tailwindcss: ^3.0.19
   typescript: 4.5.5
+  wavesurfer.js: ^6.0.0
 
 dependencies:
+  '@tailwindcss/line-clamp': 0.3.1_tailwindcss@3.0.19
   next: 12.0.10_react-dom@17.0.2+react@17.0.2
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
+  react-dropzone: 12.0.2_react@17.0.2
+  react-hook-form: 7.27.0_react@17.0.2
+  wavesurfer.js: 6.0.0
 
 devDependencies:
   '@commitlint/cli': 16.1.0_@types+node@17.0.16
   '@commitlint/config-conventional': 16.0.0
+  '@tailwindcss/forms': 0.4.0_tailwindcss@3.0.19
   '@types/node': 17.0.16
   '@types/react': 17.0.39
+  '@types/wavesurfer.js': 6.0.0
   '@typescript-eslint/eslint-plugin': 5.11.0_eslint@8.8.0+typescript@4.5.5
   autoprefixer: 10.4.2_postcss@8.4.6
   eslint: 8.8.0
@@ -418,6 +430,23 @@ packages:
     resolution: {integrity: sha512-JLo+Y592QzIE+q7Dl2pMUtt4q8SKYI5jDrZxrozEQxnGVOyYE+GWK9eLkwTaeN9DDctlaRAQ3TBmzZ1qdLE30A==}
     dev: true
 
+  /@tailwindcss/forms/0.4.0_tailwindcss@3.0.19:
+    resolution: {integrity: sha512-DeaQBx6EgEeuZPQACvC+mKneJsD8am1uiJugjgQK1+/Vt+Ai0GpFBC2T2fqnUad71WgOxyrZPE6BG1VaI6YqfQ==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
+    dependencies:
+      mini-svg-data-uri: 1.4.3
+      tailwindcss: 3.0.19_833e1018ad0d7954aa80c53675939269
+    dev: true
+
+  /@tailwindcss/line-clamp/0.3.1_tailwindcss@3.0.19:
+    resolution: {integrity: sha512-pNr0T8LAc3TUx/gxCfQZRe9NB2dPEo/cedPHzUGIPxqDMhgjwNm6jYxww4W5l0zAsAddxr+XfZcqttGiFDgrGg==}
+    peerDependencies:
+      tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
+    dependencies:
+      tailwindcss: 3.0.19_833e1018ad0d7954aa80c53675939269
+    dev: false
+
   /@tsconfig/node10/1.0.8:
     resolution: {integrity: sha512-6XFfSQmMgq0CFLY1MslA/CPUfhIL919M1rMsa5lP2P097N2Wd1sSX0tx1u4olM16fLNhtHZpRhedZJphNJqmZg==}
     dev: true
@@ -432,6 +461,10 @@ packages:
 
   /@tsconfig/node16/1.0.2:
     resolution: {integrity: sha512-eZxlbI8GZscaGS7kkc/trHTT5xgrjH3/1n2JDwusC9iahPKWMRvRjJSAN5mCXviuTGQ/lHnhvv8Q1YTpnfz9gA==}
+    dev: true
+
+  /@types/debounce/1.2.1:
+    resolution: {integrity: sha512-epMsEE85fi4lfmJUH/89/iV/LI+F5CvNIvmgs5g5jYFPfhO2S/ae8WSsLOKWdwtoaZw9Q2IhJ4tQ5tFCcS/4HA==}
     dev: true
 
   /@types/json-schema/7.0.9:
@@ -472,6 +505,12 @@ packages:
 
   /@types/scheduler/0.16.2:
     resolution: {integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==}
+    dev: true
+
+  /@types/wavesurfer.js/6.0.0:
+    resolution: {integrity: sha512-w5yP3KLMhbBC4JvjWD5Yf9pUNLqZvuT4o/RIFJc0XQ8flbxdg+VOZ558PBQpczBsDAqUlfPkPfkBAUE4uItU3Q==}
+    dependencies:
+      '@types/debounce': 1.2.1
     dev: true
 
   /@typescript-eslint/eslint-plugin/5.11.0_eslint@8.8.0+typescript@4.5.5:
@@ -777,6 +816,11 @@ packages:
     resolution: {integrity: sha512-Z7tMw1ytTXt5jqMcOP+OQteU1VuNK9Y02uuJtKQ1Sv69jXQKKg5cibLwGJow8yzZP+eAc18EmLGPal0bp36rvQ==}
     engines: {node: '>=8'}
     dev: true
+
+  /attr-accept/2.2.2:
+    resolution: {integrity: sha512-7prDjvt9HmqiZ0cl5CRjtS84sEyhsHP2coDkaZKRKVfCDo9s7iw7ChVmar78Gu9pC4SoR/28wFu/G5JJhTnqEg==}
+    engines: {node: '>=4'}
+    dev: false
 
   /autoprefixer/10.4.2_postcss@8.4.6:
     resolution: {integrity: sha512-9fOPpHKuDW1w/0EKfRmVnxTDt8166MAnLI3mgZ1JCnhNtYWxcJ6Ud5CO/AVOZi/AvFa8DY9RTy3h3+tFBlrrdQ==}
@@ -1575,6 +1619,13 @@ packages:
       flat-cache: 3.0.4
     dev: true
 
+  /file-selector/0.4.0:
+    resolution: {integrity: sha512-iACCiXeMYOvZqlF1kTiYINzgepRBymz1wwjiuup9u9nayhb6g4fSwiyJ/6adli+EPwrWtpgQAh2PoS7HukEGEg==}
+    engines: {node: '>= 10'}
+    dependencies:
+      tslib: 2.3.1
+    dev: false
+
   /fill-range/7.0.1:
     resolution: {integrity: sha512-qOo9F+dMUmC2Lcb4BbVvnKJxTPjCm+RRpe4gDuGrzkL7mEVl/djYSu2OdQ2Pa302N4oqkSg9ir6jaLWJ2USVpQ==}
     engines: {node: '>=8'}
@@ -2240,6 +2291,11 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
+  /mini-svg-data-uri/1.4.3:
+    resolution: {integrity: sha512-gSfqpMRC8IxghvMcxzzmMnWpXAChSA+vy4cia33RgerMS8Fex95akUyQZPbxJJmeBGiGmK7n/1OpUX8ksRjIdA==}
+    hasBin: true
+    dev: true
+
   /minimatch/3.0.5:
     resolution: {integrity: sha512-tUpxzX0VAzJHjLu0xUfFv1gwVp9ba3IOuRAVH2EGuRW8a5emA2FlACLqiT/lDVtS1W+TGNwqz3sWaNyLgDJWuw==}
     dependencies:
@@ -2642,7 +2698,6 @@ packages:
       loose-envify: 1.4.0
       object-assign: 4.1.1
       react-is: 16.13.1
-    dev: true
 
   /punycode/2.1.1:
     resolution: {integrity: sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==}
@@ -2679,9 +2734,29 @@ packages:
       scheduler: 0.20.2
     dev: false
 
+  /react-dropzone/12.0.2_react@17.0.2:
+    resolution: {integrity: sha512-wnU3+QZA9H5XqC+UNdEDs5YuB+XgJh5mQ9Bop4PUtN/2nKTGTpBbfkcsm9OVCYylBHak69Ezjzbhx/0Cb6OfjA==}
+    engines: {node: '>= 10.13'}
+    peerDependencies:
+      react: '>= 16.8'
+    dependencies:
+      attr-accept: 2.2.2
+      file-selector: 0.4.0
+      prop-types: 15.8.1
+      react: 17.0.2
+    dev: false
+
+  /react-hook-form/7.27.0_react@17.0.2:
+    resolution: {integrity: sha512-NEh3Qbz1Rg3w95SRZv0kHorHN3frtMKasplznMBr8RkFrE4pVxjd/zo3clnFXpD0FppUVHBMfsTMtTsa6wyQrA==}
+    engines: {node: '>=12.22.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17
+    dependencies:
+      react: 17.0.2
+    dev: false
+
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
-    dev: true
 
   /react/17.0.2:
     resolution: {integrity: sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==}
@@ -3184,7 +3259,6 @@ packages:
 
   /tslib/2.3.1:
     resolution: {integrity: sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==}
-    dev: true
 
   /tsutils/3.21.0_typescript@4.5.5:
     resolution: {integrity: sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==}
@@ -3281,6 +3355,10 @@ packages:
       spdx-correct: 3.1.1
       spdx-expression-parse: 3.0.1
     dev: true
+
+  /wavesurfer.js/6.0.0:
+    resolution: {integrity: sha512-38sYA7wqKBDTh67gle7TcgTD/ihA68eMlMZfUcJWzvolZts3K2Z/d4ZJtXFyNqEpDzhPnMNyIybcWRQwNt2NKA==}
+    dev: false
 
   /which-boxed-primitive/1.0.2:
     resolution: {integrity: sha512-bwZdv0AKLpplFY2KZRX6TvyuN7ojjr7lwkg6ml0roIy9YeuSr7JS372qlNW18UQYzgYK9ziGcerWqZOmEn9VNg==}

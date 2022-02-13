@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         rays: 'url(/images/shared/bg.jpg)',
+        glow: 'url(/images/shared/bg-glow.jpg)',
         'gradient-radial': 'radial-gradient(var(--gradient-color-stops))',
       },
       fontFamily: {
@@ -16,5 +17,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/line-clamp')],
 }
